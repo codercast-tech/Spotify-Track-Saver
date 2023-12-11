@@ -1,0 +1,147 @@
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Estilos generales */
+.container {
+    background-color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.btn-spotify {
+    background: linear-gradient(to right, #1ED760, #1DB954);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.btn-spotify:hover {
+    background: linear-gradient(to right, #1DB954, #1ED760);
+}
+
+/* Estilos para la lista de cuentas */
+#listaCuentas {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #1DB954;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.list-group-item {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    border-bottom: 1px solid #1DB954;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group-item a {
+    color: #1DB954;
+    text-decoration: none;
+}
+
+#contadorCuentas {
+    color: #1DB954;
+    font-size: 20px;
+}
+
+#paginacion {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagina-actual {
+    color: #1DB954;
+}
+
+#busqueda {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#inputBusqueda {
+    width: 300px;
+    background-color: #212121;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    font-family: 'Roboto Light Italic', sans-serif;
+}
+
+/* Estilos para la ventana emergente "Manejar Cuenta" */
+.modal-content {
+    background-color: #fff; /* Cambia el fondo a blanco */
+    color: #333; /* Cambia el color del texto a un tono más oscuro */
+}
+
+.modal-header {
+    background-color: #007bff; /* Cambia el fondo del encabezado a azul */
+    color: #fff; /* Cambia el color del texto del encabezado a blanco */
+}
+
+.modal-header button.close {
+    color: #fff; /* Cambia el color del botón "Cerrar" a blanco */
+}
+
+#btnProgramarArtista {
+    background-color: #28a745; /* Cambia el fondo del botón a verde */
+    color: #fff; /* Cambia el color del texto del botón a blanco */
+}
+
+.table {
+    background-color: #fff; /* Cambia el fondo de la tabla a blanco */
+    color: #333; /* Cambia el color del texto de la tabla a un tono más oscuro */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Cambia el fondo de las filas pares a un tono más claro */
+}
+
+.modal-footer button.close {
+    color: #333; /* Cambia el color del botón "Cerrar" a un tono más oscuro */
+}
+
+/* Estilos para la ventana emergente */
+.ventana-emergente {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.ventana-emergente-contenido {
+    background-color: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el botón de cerrar la ventana emergente */
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
