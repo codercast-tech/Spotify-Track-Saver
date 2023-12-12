@@ -58,3 +58,34 @@ El objetivo a largo plazo de Spotify Track Saver es evolucionar más allá de la
 
 Automatización Inteligente de Playlists: Implementar sistemas que actualicen automáticamente las playlists basándose en las interacciones y preferencias del usuario.
 Integración Profunda con Spotify: Lograr una sincronización perfecta con la plataforma Spotify, permitiendo una gestión más intuitiva y personalizada de las experiencias musicales de los usuarios.
+
+-- Crea la base de datos
+CREATE DATABASE Spotify_DB;
+
+-- Selecciona la base de datos
+USE Spotify_DB;
+
+-- Crea la tabla de usuarios
+CREATE TABLE Usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    correo_electronico VARCHAR(255) NOT NULL,
+    contrasena VARCHAR(255) NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (correo_electronico)
+);
+
+-- Otorga todos los privilegios al usuario 'codercast' en la base de datos Spotify_DB
+GRANT ALL PRIVILEGES ON Spotify_DB.* TO 'codercast'@'localhost' IDENTIFIED BY 'eJ6nSH@rPcfNZ!)R';
+
+-- Actualiza los privilegios
+FLUSH PRIVILEGES;
+
+CREATE TABLE CuentasSpotify (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    access_token VARCHAR(255) NOT NULL,
+    refresh_token VARCHAR(255) NOT NULL,
+    token_expiration TIMESTAMP NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
